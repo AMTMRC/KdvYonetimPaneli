@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RegisterController"
+            prefWidth="350" prefHeight="300">
+    <children>
+        <Button text="Girişe Dön" layoutX="230" layoutY="10" onAction="#goToLogin"/>
+
+        <Label layoutX="30" layoutY="20" text="Yeni Kullanıcı Kaydı"/>
+
+        <Label layoutX="30" layoutY="60" text="Kullanıcı Adı"/>
+        <TextField fx:id="usernameField" layoutX="30" layoutY="80" prefWidth="250"/>
+
+        <Label layoutX="30" layoutY="120" text="Şifre"/>
+        <PasswordField fx:id="passwordField" layoutX="30" layoutY="140" prefWidth="250"/>
+
+        <Label layoutX="30" layoutY="180" text="Rol"/>
+        <ComboBox fx:id="roleBox" layoutX="30" layoutY="200" prefWidth="250"/>
+
+        <Button text="Kaydet" layoutX="30" layoutY="240" prefWidth="250" onAction="#registerUser"/>
+        <Label fx:id="statusLabel" layoutX="30" layoutY="270" textFill="green"/>
+
+    </children>
+</AnchorPane>

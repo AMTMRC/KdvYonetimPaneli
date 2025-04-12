@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AdminController" prefHeight="600.0" prefWidth="900.0">
+    <children>
+        <VBox spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <HBox spacing="10.0">
+                <Label text="Kullanıcı Adı:" />
+                <TextField fx:id="usernameField" />
+
+                <Label text="E-Posta:" />
+                <TextField fx:id="emailField" />
+
+                <Label text="Rol:" />
+                <ComboBox fx:id="roleBox" prefWidth="150.0" />
+
+                <Button text="Ekle" onAction="#handleAddUser" />
+                <Button text="Güncelle" onAction="#handleUpdateUser" />
+                <Button text="Sil" onAction="#handleDeleteUser" />
+            </HBox>
+            <VBox fx:id="kdvMenuBox" visible="false" spacing="10.0" alignment="CENTER_LEFT">
+                <children>
+                    <Label text="KDV Menüsü"/>
+                    <!-- Diğer KDV işlemleri buraya gelecek -->
+                </children>
+            </VBox>
+
+            <HBox spacing="10.0">
+                <Label text="Ara:" />
+                <TextField fx:id="searchField" promptText="Kullanıcı adı veya e-posta..." />
+                <Button text="Ara" onAction="#handleSearch" />
+                <Button text="Şifre Sıfırla" onAction="#handleResetPassword" />
+            </HBox>
+            <ComboBox fx:id="roleFilterBox" prefWidth="150" promptText="Rol Filtrele"/>
+
+            <TableView fx:id="userTable" prefHeight="200.0">
+                <columns>
+                    <TableColumn fx:id="colUsername" text="Kullanıcı Adı" />
+                    <TableColumn fx:id="colEmail" text="E-Posta" />
+                    <TableColumn fx:id="colRole" text="Rol" />
+                    <TableColumn fx:id="colPassword" text="Şifre (Hash)" />
+                </columns>
+            </TableView>
+
+            <Separator />
+
+            <fx:include source="kdv.fxml" />
+        </VBox>
+    </children>
+</AnchorPane>

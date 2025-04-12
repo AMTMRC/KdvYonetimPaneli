@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.controllers.HeaderController"
+      spacing="10" padding="10">
+    <ComboBox fx:id="themeCombo" prefWidth="120"/>
+    <ComboBox fx:id="languageCombo" prefWidth="120"/>
+</HBox>

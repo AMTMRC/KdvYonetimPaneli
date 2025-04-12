@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainPanelController">
+
+    <!-- ÜST PANEL -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #f0f0f0;">
+            <Label text="Yönetim Paneli" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+            <Label fx:id="clockLabel" text="Saat..." />
+            <Button text="🌙 Tema" onAction="#toggleTheme"/>
+            <Button text="🌐 Dil" onAction="#toggleLanguage"/>
+        </HBox>
+    </top>
+
+    <!-- SOL PANEL (Başlık + Butonlar tek grup içinde) -->
+    <left>
+        <VBox spacing="15" style="-fx-padding: 15; -fx-background-color: #eeeeee;" prefWidth="200">
+            <Label text="Yönetim Paneli" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Button text="👤 Kullanıcılar" onAction="#loadUserPanel" prefWidth="160"/>
+            <Button text="💰 KDV Yönetimi" onAction="#loadKdvPanel" prefWidth="160"/>
+            <Button text="📓 Not Defteri" onAction="#loadNotesPanel" prefWidth="160"/>
+            <Button text="👤 Profil" onAction="#loadProfilePanel" prefWidth="160"/>
+            <Button text="🛠 Ayarlar" onAction="#loadSettingsPanel" prefWidth="160"/>
+            <Button text="📂 Yedekleme" onAction="#loadBackupPanel" prefWidth="160"/>
+            <Button text="🔔 Bildirimler" onAction="#loadNotificationsPanel" prefWidth="160"/>
+        </VBox>
+    </left>
+
+    <!-- ORTA PANEL (İçerik Yükleniyor) -->
+    <center>
+        <AnchorPane fx:id="contentArea"/>
+    </center>
+
+</BorderPane>
+
