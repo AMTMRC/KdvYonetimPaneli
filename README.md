@@ -116,6 +116,6 @@ Proje, temel işlevlerin tamamına yakınını başarıyla yerine getirmiştir. 
 ## 🏁 Hazırlayan
 
 **Adı Soyadı:** Ahmet Meriç  
-**Ünvan:** Teknik Servis Mühendisi  
+**Ünvan:** Bilişim Sistemleri ve Eğitim Teknolojilerinde Deneyimli Sistem Destek Uzmanı
 **GitHub:** https://github.com/AMTMRC/KdvYonetimPaneli/
 **Danışman:** MSc. Hamit Mızrak  
